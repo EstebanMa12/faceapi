@@ -98,7 +98,7 @@ elVideo.addEventListener('play', async () => {
 
         // Extracción de descriptores faciales del video 
         const descriptor = await faceapi.computeFaceDescriptor(elVideo, resizedDetections[0].landmarks)
-        // console.log(descriptor)
+        console.log(descriptor)
 
         // Registro de la persona en la base de datos
         const id = await registerFace(descriptor);
